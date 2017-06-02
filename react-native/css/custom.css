@@ -1,0 +1,15 @@
+#comparison tbody {
+    font-size: 18px
+}
+
+#why-care tbody {
+    font-size: 20px;
+}
+
+#why-care tbody td:first-child {
+    font-size: 26px;
+}
+
+code {
+    font-size: 18px;
+}

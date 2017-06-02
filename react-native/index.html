@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>React Native</h1>
+					<h3>David Soller</h3>
+					<img src="img/react.png" alt="react logo" style="height: 200px;">
+				</section>
+				<section>
+					<section>
+						<h1>What is React Native?</h1>
+					</section>
+					<section>
+						<h2>Cross platform mobile development solution</h2>
+						<br>
+						<h3>"learn once, write anywhere"</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>So, like</h2>
+						<ul>
+							<li>Xamarin</li>
+							<li>Phone Gap</li>
+							<li>Cordova</li>
+							<li>Titanium</li>
+						</ul>
+					</section>
+					<section data-markdown id="comparison">
+						<script type="text/template">
+							## Comparison
+
+							
+							Patform | Code Type | Sponsor | Implementation Overview | L
+							--- | --- | --- | ---
+							React Native | JavaScript w/ React.js | Facebook | - Native UI blocks managed by JavaScript & React <br> - Allow inclusion into existing code <br> - Faster developer feedback <br> - Open source with Facebook Licensing | [site](https://facebook.github.io/react-native/)
+							Xamarin | C# | Microsoft | - Native UI elements <br> - Compiled into native code <br> - Closed source | [site](https://www.xamarin.com/)
+							Phone Gap | JavaScript | Adobe | - Web views <br> - Built on Cordova <br> - Open source | [site](http://phonegap.com)
+							Cordova | JavaScript | Apache | - Web views <br> - Open source | [site](https://cordova.apache.org/)
+							Titanium | JavaScript | Appcelerator | - Seems to be the same thing as React Native? <br> - Open source? | [site](https://www.appcelerator.com)
+						</script>
+					</section>
+				</section>
+				<section data-markdown id="why-care">
+					<script type="text/template">
+						## Why does X matter?
+
+						Thing | Reasoning
+						--- | ---
+						Native UI blocks | - App preformance <br> - UI hides underlying implementation
+						JavaScript & React | - Hiring ease as people "know" JavaScript <br> - Documentation <br> - Tooling
+						Inclusion into existing code | - Allows incremental use <br> - Only use where it makes sense <br> - Always add features, don't rewrite to have feature parity <br> - Move fast
+						Faster developer feedback | - Hot reloading instead of compile & wait style
+						Open source <br>w/ Facebook Licensing | - These aren't supported by the underlying platforms as such you could possibly self upgrade to the newest APIs <br> - Crazy licensing
+					</script>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 0px;">Code?</h2>
+					<h2>Looks like React</h2>
+					<pre><code data-trim data-noescape>import React, { Component } from 'react';
+import { AppRegistry, Text } from 'react-native';
+
+class HelloWorldApp extends Component {
+  render() {
+    return (
+      <Text>Hello world!</Text>
+    );
+  }
+}
+
+AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
+					</code></pre>
+				</section>
+				<section>
+					<h2 style="margin-bottom: 0px;">Styling?</h2>
+					<h2>Basically CSS styled from JavaScript!</h2>
+					<p>&#x1f60d; comelCassed CSS in a JavaScript Style object!</p>
+					<pre><code data-trim data-noescape>const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
+						</code></pre>
+				</section>
+				<section>
+					<h1>Questions?</h1>
+				</section>
+				<section>
+					<h1>Tutorials</h1>
+					<h3><a href="https://facebook.github.io/react-native/docs/tutorial.html">https://facebook.github.io/react-native/docs/tutorial.html</a></h3>
+				</section>
+				<section>
+
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

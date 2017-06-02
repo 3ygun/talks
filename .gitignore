@@ -1,1 +1,15 @@
+# Reveal JS
 */node_modules/
+*/reveal.js/
+.idea/
+*.iml
+*.iws
+*.eml
+*/out/
+.DS_Store
+.svn
+*/log/*.log
+*/tmp/**
+*.sass-cache
+*/css/reveal.min.css
+*/js/reveal.min.js
